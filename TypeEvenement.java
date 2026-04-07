@@ -1,12 +1,14 @@
-package com.example.projetandroid;
+package com.example.projetandroid.classes;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+@Entity
 public class TypeEvenement {
-
+    @PrimaryKey(autoGenerate = true)
     private long idTE;
     private String nomTE;
 
-    public TypeEvenement(long idTE, String nomTE) {
-        this.idTE = idTE;
+    public TypeEvenement(String nomTE) {
         this.nomTE = nomTE;
     }
 
@@ -21,9 +23,9 @@ public class TypeEvenement {
     @Override
     public String toString() {
         return "TypeEvenement{" +
-            "idTE=" + idTE +
-            ", nomTE='" + nomTE + '\'' +
-            '}';
+                "idTE=" + idTE +
+                ", nomTE='" + nomTE + '\'' +
+                '}';
     }
 
     public void setIdTE(long idTE) {
