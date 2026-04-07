@@ -1,7 +1,6 @@
-package com.example.projetandroid;
+package com.example.projetandroid.classes;
 
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -89,5 +88,17 @@ public class Emplacement {
         this.idEm = idEm;
     }
 
+    @Override
+    public String toString() {
+        return "Emplacement{" +
+                "idEm=" + idEm +
+                ", nomEm='" + nomEm + '\'' +
+                ", numRue=" + numRue +
+                ", nomRue='" + nomRue + '\'' +
+                ", Ville='" + Ville + '\'' +
+                ", cp=" + cp +
+                ", capacite=" + capacite +
+                ", popularite=" + popularite +
+                '}';
+    }
 }
-
