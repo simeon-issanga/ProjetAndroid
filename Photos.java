@@ -17,6 +17,42 @@ public class Photos {
     private String nomP;
 
     private long idEm;
+    
+    public Photos(String nomP, long idEm) {
+        this.nomP = nomP;
+        this.idEm = idEm;
+    }
 
+    public long getIdP() {
+        return idP;
+    }
 
+    public void setIdP(long idP) {
+        this.idP = idP;
+    }
+
+    public String getNomP() {
+        return nomP;
+    }
+
+    public void setNomP(String nomP) {
+        this.nomP = nomP;
+    }
+
+    public long getIdEm() {
+        return idEm;
+    }
+
+    public void setIdEm(long idEm) {
+        this.idEm = idEm;
+    }
+
+    @Override
+    public String toString() {
+        return "Photos{" +
+                "idP=" + idP +
+                ", nomP='" + nomP + '\'' +
+                ", idEm=" + idEm +
+                '}';
+    }
 }
