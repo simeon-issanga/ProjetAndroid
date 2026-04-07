@@ -1,10 +1,13 @@
-package com.example.projetandroid;
+package com.example.projetandroid.classesDAO;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.example.projetandroid.classes.Emplacement;
+import com.example.projetandroid.classes.Photos;
 
 import java.util.List;
 
@@ -14,7 +17,7 @@ public interface PhotosDAO {
     LiveData<List<Photos>> getAll();
 
     @Query("select * from Photos where idEm = :unId")
-    LiveData<Emplacement> getEmplacementById(long unId);
+    LiveData<Emplacement> getPhotosById(long unId);
 
     @Insert
     void insert(Photos unePhoto);
@@ -24,3 +27,4 @@ public interface PhotosDAO {
 
 
 }
+
