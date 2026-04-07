@@ -1,4 +1,4 @@
-package com.example.projetandroid;
+package com.example.projetandroid.classes;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -20,4 +20,3 @@ public class Photos {
 
 
 }
-
