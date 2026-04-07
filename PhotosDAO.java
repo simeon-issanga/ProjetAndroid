@@ -17,7 +17,7 @@ public interface PhotosDAO {
     LiveData<List<Photos>> getAll();
 
     @Query("select * from Photos where idEm = :unId")
-    LiveData<Emplacement> getPhotosById(long unId);
+    LiveData<Photos> getPhotosById(long unId);
 
     @Insert
     void insert(Photos unePhoto);
@@ -27,4 +27,3 @@ public interface PhotosDAO {
 
 
 }
-
