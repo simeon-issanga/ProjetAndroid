@@ -1,10 +1,11 @@
-package com.example.projetandroid;
+package com.example.projetandroid.classes;
+
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
-@Entity(tableName = "personnes")
-public class Personne {
+@Entity
+public class Personne{
     @PrimaryKey(autoGenerate = true)
     private long idP;
     protected String nomP;
@@ -13,16 +14,16 @@ public class Personne {
     protected String mailP;
 
     protected String mdpP;
-    private String typeU;
+    private long typeUId;
 
-    public Personne( String nomP, String prenomP, String telephoneP, String mailP, String mdpP, String typeU) {
+    public Personne(String nomP, String prenomP, String telephoneP, String mailP, String mdpP, long typeUId) {
 
         this.nomP = nomP;
         this.prenomP = prenomP;
         this.telephoneP = telephoneP;
         this.mailP = mailP;
         this.mdpP = mdpP;
-        this.typeU = typeU;
+        this.typeUId = typeUId;
     }
 
     public long getNumP() {
@@ -53,13 +54,13 @@ public class Personne {
     @Override
     public String toString() {
         return "Personne{" +
-            "numP=" + idP +
-            ", nomP='" + nomP + '\'' +
-            ", prenomP='" + prenomP + '\'' +
-            ", telephoneP='" + telephoneP + '\'' +
-            ", mailP='" + mailP + '\'' +
-            ", mdpP='" + mdpP + '\'' +
-            '}';
+                "numP=" + idP +
+                ", nomP='" + nomP + '\'' +
+                ", prenomP='" + prenomP + '\'' +
+                ", telephoneP='" + telephoneP + '\'' +
+                ", mailP='" + mailP + '\'' +
+                ", mdpP='" + mdpP + '\'' +
+                '}';
     }
 
     public void setNumP(long idP) {
@@ -85,4 +86,20 @@ public class Personne {
     public void setMdpP(String mdpP) {
         this.mdpP = mdpP;
     }
+    public long getIdP() {
+        return idP;
+    }
+
+    public void setIdP(long idP) {
+        this.idP = idP;
+    }
+
+    public long getTypeUId() {
+        return typeUId;
+    }
+
+    public void setTypeUId(long typeUId) {
+        this.typeUId = typeUId;
+    }
+
 }
